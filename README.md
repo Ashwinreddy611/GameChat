@@ -22,5 +22,6 @@ b) I should also be able to uplad games to the site for the communities benefit 
 c) I should be able to manage the games on my wishlist with ease and be able to sort the wishlist by genre as well as alphabetically. 
 
 
-#### **Frequent Visitor Goals:** 
+#### **Site Owner Goals:** 
+a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
 

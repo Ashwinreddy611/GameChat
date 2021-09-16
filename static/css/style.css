@@ -1,3 +1,8 @@
+body {
+    color: white;
+    background-color: black;
+}
+
 .primary {
     background-color: #c5283d;
 }

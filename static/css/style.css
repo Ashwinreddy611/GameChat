@@ -1,3 +1,4 @@
+/*General Page Stylings */
 body {
     color: white;
     background-color: black;
@@ -5,4 +6,40 @@ body {
 
 .primary {
     background-color: #c5283d;
+}
+
+.off-white {
+  color:#fafafa;
+}
+
+/*Register Page Stylings */
+#register-card {
+  display: flex;
+}
+
+#register-card-info-left, #register-card-info-right {
+  flex: 2;
+  padding: 1em;
+}
+
+#register-card-info-left{
+  margin-right: 0.5em;
+  font-size: 25px;
+  text-align:center;
+  padding: 30px;
+}
+
+#register-card-info-right{
+  margin-left: 0.5em;
+}
+
+.stripes {
+  color: white;
+  background: repeating-linear-gradient(
+    45deg,
+    #c5283d,
+    #c5283d 20px,
+    black 20px,
+    black 40px
+  )
 }

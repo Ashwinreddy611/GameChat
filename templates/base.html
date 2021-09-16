@@ -12,7 +12,34 @@
     {% endblock %}
 </head>
 <body>
-    
+    <header>
+
+  <nav>
+    <!--Desktop Navbar-->
+    <div class="nav-wrapper primary">
+      <a href="#!" class="brand-logo">GameChat</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('get_games')}}">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Watchlist</a></li>
+        <li><a href="#">Log Out</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Mobile Navbar-->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="{{ url_for('get_games')}}">Home</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Watchlist</a></li>
+    <li><a href="#">Log Out</a></li>
+    <li><a href="#">Log In</a></li>
+    <li><a href="#">Register</a></li>
+  </ul>
+    </header>
     {% block content %}
     {% endblock %}
 

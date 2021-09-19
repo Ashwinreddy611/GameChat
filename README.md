@@ -25,3 +25,10 @@ c) I should be able to manage the games on my wishlist with ease and be able to 
 #### **Site Owner Goals:** 
 a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
 
+### Design
+
+#### Colour Scheme
+a) The colour scheme for my website is a primary colour of red, secondary colour of black in the form of the background and a tertiary colour of white in the form of all scripture on the site. I feel the scheme chosen reflects what I would like the user to feel when on the site and that is relaxed and comfortable. This comfort comes from the dark tones of the site which is less straining to the eyes than more conventional light tones but still retains an aesthetically pleasing design.
+
+#### Typography
+In terms of typography the fonts Monoton and Roboto. The Monoton font was chosen due to the fact that it has a very retro connotation and is a reminder to the user of the games and tech of the past. This is coupled with the Roboto font that is very sleek and modern to connote the ever changing and devloping games coming out now and in the coming future. These two fonts complement each other even though there symbolism run parallel and that's why I was very much happy to choose this pairing.  

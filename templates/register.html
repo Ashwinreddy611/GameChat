@@ -2,7 +2,7 @@
 {% block content %}
     <h2 class="center-align">Register Here</h2>
 
-    <div class="row col s12 m6 off-white" id="register-card">
+    <div class="row col s12 m6" id="register-card">
             <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
                 <p> <strong> In order to interact with the website and its features you must register an account with us. This
                     will allow you to browse the game gallery, interact with other users in the comment sections of the
@@ -10,7 +10,7 @@
                 </p>
             </div>
         <div class="col s12 m6 card-panel stripes" id="register-card-info-right">
-            <form class="col s12 " method="POST" action="{{ url_for('register')}}">
+            <form class="col s12" method="POST" action="{{ url_for('register')}}">
                 <!--Username Field -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -29,7 +29,7 @@
                 </div>
                 <!--Submit Button-->
                 <div class="row">
-                    <button class="btn waves-effect waves-light off-white" type="submit" name="action">Register
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Register
                         <i class="material-icons right">check</i>
                     </button>
                 </div>

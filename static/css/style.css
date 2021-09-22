@@ -12,6 +12,10 @@ body {
   color:#fafafa;
 }
 
+.flash-msg {
+  line-height: 5;
+}
+
 /*Register Page Stylings */
 #register-card {
   display: flex;
@@ -42,4 +46,11 @@ body {
     black 20px,
     black 40px
   )
+}
+
+.input-field input[type=text]:focus + label {
+  color: #fff;
+}
+.input-field label {
+  color: #fff;
 }

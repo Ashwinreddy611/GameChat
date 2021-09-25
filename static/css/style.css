@@ -54,3 +54,39 @@ body {
 .input-field label {
   color: #fff;
 }
+
+/*Games Page Stylings */
+.game-card {
+  width: 200px;
+  height: 200px;
+}
+
+.title-bg {
+  background-color: black;
+  height: 50px;
+  width: 100px;
+}
+
+.card .card-title {
+  font-size: 20px;
+  padding: 0;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card .card-image .card-title {
+  padding: 15px;
+}
+
+.border {
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  padding: 10px;
+}
+
+.wl-button {
+  font-size: 11px;
+}

@@ -1,32 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 class="center-align primary">Add Task</h2>
+<h2 class="center-align primary">Add Games</h2>
 
-
-  <div class="row col s12 m6" id="register-card">
-      <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
-          <form class="col s12">
-              <div class="row">
-                  <div class="input-field col s6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">First Name</label>
-                  </div>
-                  <div class="input-field col s6">
-                      <i class="material-icons prefix">phone</i>
-                      <input id="icon_telephone" type="tel" class="validate">
-                      <label for="icon_telephone">Telephone</label>
-                  </div>
-              </div>
-          </form>
-      </div>
-      <div class="col s12 m6 card-panel stripes" id="register-card-info-right">
-          <p> <strong> Members are what make this site and we love that you have 
-              found the time to add a new game to our evergrowing database. In order 
-            to successfully complete this action please fill out the required fields 
+<div class="row col s12 m6 card-panel stripes" id="register-card-info-right">
+    <p> <strong> Members are what make this site and we love that you have
+            found the time to add a new game to our evergrowing database. In order
+            to successfully complete this action please fill out the required fields
             of the form and submit.</strong>
-          </p>
-      </div>
+    </p>
+</div>
+
+<div class="row col s12 m6" id="register-card">
+    <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="genre_name" name="genre_name" minlength="5"
+                    maxlength="50" type="text" class="validate" required>
+                    <label for="genre_name">Genre</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="game_name" name="game_name" minlength="5"
+                    maxlength="50" type="text" class="validate" required>
+                    <label for="game_name">Game Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <textarea id="game_description" name="game_description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="game_description">Game Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                    <label for="due_date">Release Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="genre_name" name="genre_name" type="text" class="validate" required>
+                    <label for="genre_name">Image URL</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}

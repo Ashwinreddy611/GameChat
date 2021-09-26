@@ -90,3 +90,10 @@ body {
 .wl-button {
   font-size: 11px;
 }
+
+.datepicker-date-display{
+  background-color: #c5283d;
+}
+.datepicker-day-button {
+  color:black;
+}

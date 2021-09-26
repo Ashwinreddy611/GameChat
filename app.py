@@ -97,8 +97,21 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route("/add_games")
+@app.route("/add_games", methods=["GET", "POST"])
 def add_games():
+    if request.method == "POST":
+        game = {
+            "genre_name": request.form.get("genre_name"),
+            "game_name": request.form.get("game_name"),
+            "game_description": request.form.get("game_description"),
+            "release_date": request.form.get("release_date"),
+            "img_url": request.form.get("img_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.games.insert_one(game)
+        flash("Thanks for adding a game!")
+        return redirect(url_for('get_games'))
+
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("add_games.html", genres=genres)
 

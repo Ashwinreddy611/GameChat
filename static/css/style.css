@@ -16,6 +16,13 @@ body {
   line-height: 5;
 }
 
+.btn {
+  background-color:#c5283d;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
 /*Register Page Stylings */
 #register-card {
   display: flex;
@@ -91,6 +98,7 @@ body {
   font-size: 11px;
 }
 
+/*Add Game form stylings*/
 .datepicker-date-display{
   background-color: #c5283d;
 }
@@ -104,4 +112,8 @@ body {
 
 .dropdown-content li>span {
   color:#c5283d;
+}
+
+.select-wrapper input.select-dropdown {
+  color: black;
 }

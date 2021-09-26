@@ -97,3 +97,11 @@ body {
 .datepicker-day-button {
   color:black;
 }
+
+.select-wrapper input.select-dropdown  {
+  color: white;
+}
+
+.dropdown-content li>span {
+  color:#c5283d;
+}

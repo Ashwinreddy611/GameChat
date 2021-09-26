@@ -23,6 +23,11 @@ body {
   border-width: 1px;
 }
 
+.card-container{
+  display: flex;
+  flex-direction: row;
+}
+
 /*Register Page Stylings */
 #register-card {
   display: flex;

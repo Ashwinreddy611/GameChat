@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row col s6 m4">
-    <ul class="row game-card ">
+<div>
+    <div class="card-container">
         {% for game in games %}
-        <li class="border ">
+        <div class="border" style="width: 33%">
             <div class="card">
                 <div class="card-image ">
                     <img src="{{game.img_url}}">
-                    <span class="card-title title-bg">{{game.game_name}}</span>
+                    
                 </div>
             </div>
             <div class="card-content">
+                <h6 class="card-title">{{game.game_name}}</h6> <br>
                 <strong>{{game.genre_name}}</strong> <br>
                 <p>{{game.game_description}}</p> <br>
                 <p>{{game.release_date}}</p> <br>
@@ -25,9 +26,9 @@
                 {% endif %}
 
             </div>
-        </li>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}
 

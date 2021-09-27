@@ -122,3 +122,7 @@ body {
 .select-wrapper input.select-dropdown {
   color: black;
 }
+
+.card-content > .btn-small {
+  margin-top: 10px;
+}

@@ -126,3 +126,7 @@ body {
 .card-content > .btn-small {
   margin-top: 10px;
 }
+
+#game-name, #genre-name, #game-description , #img-url{
+  color: white;
+}

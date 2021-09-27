@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="center-align primary">Edit Games</h2>
+
+<div class="row col s12 m6" id="register-card">
+    <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
+        <form class="col s12" method="POST" action="{{url_for('edit_game', game_id=game._id)}}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="genre_name" name="genre_name" class="validate add-game-form" required>
+                        <option value="" disabled selected>Choose Genre</option>
+                        {% for genre in genres %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="genre_name">Genre Selection</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="game_name" name="game_name" minlength="5"
+                    maxlength="50" type="text" class="validate" required>
+                    <label for="game_name">Game Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <textarea id="game_description" name="game_description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="game_description">Game Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">date_range</i>
+                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                    <label for="due_date">Release Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="img_url" name="img_url" type="text" class="validate" required>
+                    <label for="img_url">Image URL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light" type="submit">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

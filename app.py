@@ -116,6 +116,13 @@ def add_games():
     return render_template("add_games.html", genres=genres)
 
 
+@app.route("/edit_game/<game_id>", methods=["GET", "POST"])
+def edit_game(game_id):
+    game = mongo.db.games.find_one({"_id": ObjectId(game_id)})
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("edit_game.html", game=game, genres=genres)
+
+
 if __name__ == "__main__":
    app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

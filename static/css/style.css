@@ -116,7 +116,7 @@ body {
 }
 
 .select-wrapper input.select-dropdown  {
-  color: white;
+  color: #c5283d;
 }
 
 .dropdown-content li>span {
@@ -128,6 +128,6 @@ body {
   margin-top: 10px;
 }
 
-#game-name, #game-description , #img-url, #due-date{
+#game-name, #game-description , #img-url, #release-date{
   color: white;
 }

@@ -12,6 +12,10 @@ body {
   color:#fafafa;
 }
 
+.card-panel {
+  background-color: black;
+}
+
 .flash-msg {
   line-height: 5;
 }
@@ -119,14 +123,11 @@ body {
   color:#c5283d;
 }
 
-.select-wrapper input.select-dropdown {
-  color: black;
-}
 
 .card-content > .btn-small {
   margin-top: 10px;
 }
 
-#game-name, #genre-name, #game-description , #img-url{
+#game-name, #game-description , #img-url, #due-date{
   color: white;
 }

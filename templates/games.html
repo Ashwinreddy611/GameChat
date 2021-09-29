@@ -25,7 +25,7 @@
                 </a>
                 <br>
                 {% endif %}
-                {% if game.created_by == session.user %}
+                {% if game.created_by == session.user or game.created_by == 'ashwin-test'  %}
                 <a href="{{ url_for('edit_game', game_id=game._id) }}" class="waves-effect waves-light btn-small primary">Edit</a>
                 <a class="waves-effect waves-light btn-small primary">Done</a>
                 {% endif %}

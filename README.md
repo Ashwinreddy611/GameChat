@@ -86,7 +86,9 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 ### Testing 
 #### Validation
 * HTML - All pages passed the validation using the validator found [Here](https://validator.w3.org/nu/). The checks were done by viewing the page sources of each page as the validator had problems with jinja templating. 
-* CSS - The css passed validation using the validator found [Here](https://jigsaw.w3.org/css-validator/#validate_by_input)
+* CSS - The css passed validation using the validator found [Here](https://jigsaw.w3.org/css-validator/#validate_by_input).
+* JS - The js didn't need validating as all that was used ws jquery used from materialize to intiate it's components.
+* Python 
 
 ### Deployment 
 #### Heroku Deployment 

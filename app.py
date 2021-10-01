@@ -67,14 +67,17 @@ def login():
         if registered_user:
             # checks if password matches user input
             if check_password_hash(
-                registered_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                            "profile", username=session["user"]))
+                registered_user["password"],
+                    request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}"
+                              .format(request.form.get("username")))
+                        return redirect(url_for(
+                                "profile", username=session["user"]))
             else:
                 # invalid password match
-                flash("Unfortunately your Username and/or Password is incorrect")
+                flash("Unfortunately your Username and/or
+                      Password is incorrect")
                 return redirect(url_for("login"))
 
         else:
@@ -93,7 +96,7 @@ def profile(username):
 
     if session['user']:
         return render_template("profile.html", username=username)
-    
+
     return redirect(url_for('login'))
 
 
@@ -150,6 +153,6 @@ def delete_game(game_id):
 
 
 if __name__ == "__main__":
-   app.run(host=os.environ.get("IP"),
+    app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)

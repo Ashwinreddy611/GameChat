@@ -115,6 +115,10 @@ b) I should also be able to upload games to the site for the communities benefit
 
 c) I should be able to manage the games on my wishlist with ease and be able to sort the wishlist by genre as well as alphabetically. 
 > i. These features will be implemented when the wishlist functionaility is deployed to the website in the distant future.
+
+#### **Site Owner Goals:** 
+a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
+> i. As the site owner with the account 'ashwin-test' I have full admin capabilities, I can delete and edit any posts whilst still bein able to upload myself.
 ### Deployment 
 #### Heroku Deployment 
 * Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 

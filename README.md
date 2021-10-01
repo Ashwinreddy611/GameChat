@@ -36,6 +36,29 @@ a) As the site owner I should have full admin capabitlites being able to monitor
 ### Wireframes
 
 ### Features
+#### Features availible to all members 
+* The ability to view all the posts on the site of all the different games. There is also the ability to register for these unregistered memebers which is very easy. 
+
+#### Features available to registered members 
+* The ability to post games to the site, edit the details of the post as well as delte the post if they so please. The only other user with the same access to another individuals post is the admin who goes by the name of admin.
+
+#### Review of the website components 
+* All users when registering to the website, the proghramming measures take full effect in that users can't register with a taken username or anything less than five characters. This prevents users from registering with a tap of the spacebar. 
+
+* All registered users can only edit and delete their own posts and this is done using a conditional check to have the buttons that allow for editing and/or deletion to only be availiable to said user. 
+
+* The form for the addition of games must have all fields completed properly otherwise the user cannot submit the form. This prevents users from making incomplete posts to the site. 
+
+* The navbar is conditional to the user. If the user is not registered or logged out then all that is available and displayed to the user is the: Home, Log In and Register pages. For all Registered user then what is availiable and displayed is the: Home, Profile, Add Game and Log Out pages. 
+
+#### Features to be implemented in the future
+* The first feature to be implemented in the future is a comment section for each post so that registered users can interact with each other and discuss their thoughts about each game. Non registered users would be able to read these comments only. 
+
+* The second feature to be implemented is a button to add a post to a watchlist page. This would essentially be a bookmark feature so that users can save posts for games they are interested in and keep track of games they would like to purchase in the future. 
+
+* The third feature to implement is an affiliate link system where users can sell the game that has been posted and the site would take a percentage of any purchases. The attraction to selling on the website would be that there is a large community of users making a sale very convenient. 
+
+### Database
 
 ### Technologies Used
 #### Languages

@@ -77,12 +77,18 @@ body {
 }
 .input-field label {
   color: #fff;
+  display: block;
 }
 
 /*Games Page Stylings */
+.border {
+   width: 33%;
+}
+
 .game-card {
   width: 200px;
   height: 200px;
+  
 }
 
 .title-bg {
@@ -150,3 +156,10 @@ body {
   padding: 80px;
 }
 
+/* Media queries */
+
+@media(max-width: 576px) {
+  .border {
+    width: 100%
+  }
+}

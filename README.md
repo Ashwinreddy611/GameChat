@@ -81,3 +81,27 @@ a) As the site owner I should have full admin capabitlites being able to monitor
 * MongoDB - The site where GameChat's database information was created.
 * RandomKeyGen - The site used to create a secure secret key for the site.
 
+### Deployment 
+#### Heroku Deployment 
+* Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 
+1. os.environ.setdefault("IP", "0.0.0.0")
+2. os.environ.setdefault("PORT", "5000")
+3. os.environ.setdefault("SECRET_KEY", *undisclosed key*)
+4. os.environ.setdefault("MONGO_URI", *undisclosed uri*)
+5. os.environ.setdefault("MONGO_DBNAME", *undisclosed db name*)
+These were all added to the .gitignore file due to sensitivity. 
+
+* Next a heroku app was created by first loggin in and then clicking "new app", choosing a new and clicking the appropriate region.
+
+* Next the app had to be connected to the github repository. The github deployment method is chosen from the deploy tab, the repo is located and you click connect. Then go the settings page and click config vars, then reveal vars and enter the variables from the env.py file. Now you can enable automatyic deployment from the deployment section, then manual deploy and deploy branch (choosing the master branch). 
+#### Forking the Repository
+* Log in to your GitHub account and then locate the GameChat Repository
+* Above the settings button there is a fork button 
+* You'll now have a copy of the repo in your account that you can make changes to whilst keeping the original untouched
+
+
+#### Making a clone of the Repository
+* Log into your Github accopunt and locate the GameChat repository
+* Click the code dropdown and copy the repo url 
+* Open your terminal application (Git Bash for example) and change the working directory to the location where you want this clone.
+* enter the Git clone command and past the orignal url and click enter.

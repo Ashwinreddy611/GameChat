@@ -35,10 +35,7 @@ body {
   border-width: 1px;
 }
 
-.card-container{
-  display: flex;
-  flex-direction: row;
-}
+
 
 /*Register Page Stylings */
 #register-card {
@@ -81,15 +78,7 @@ body {
 }
 
 /*Games Page Stylings */
-.border {
-   width: 33%;
-}
 
-.game-card {
-  width: 200px;
-  height: 200px;
-  
-}
 
 .title-bg {
   background-color: black;
@@ -110,11 +99,18 @@ body {
   padding: 15px;
 }
 
+
+
 .border {
   border-style: solid;
   border-color: white;
   border-width: 3px;
   padding: 10px;
+  height: 1000px;
+}
+
+.block {
+  display: block;
 }
 
 .wl-button {
@@ -158,8 +154,3 @@ body {
 
 /* Media queries */
 
-@media(max-width: 576px) {
-  .border {
-    width: 100%
-  }
-}

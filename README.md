@@ -83,6 +83,11 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 * MongoDB - The site where GameChat's database information was created.
 * RandomKeyGen - The site used to create a secure secret key for the site.
 
+### Testing 
+#### Validation
+* HTML - All pages passed the validation using the validator found [Here](https://validator.w3.org/nu/). The checks were done by viewing the page sources of each page as the validator had problems with jinja templating. 
+* CSS - The css passed validation using the validator found [Here](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
 ### Deployment 
 #### Heroku Deployment 
 * Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 

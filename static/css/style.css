@@ -153,4 +153,8 @@ body {
 }
 
 /* Media queries */
-
+@media(max-width: 576px){
+  #register-card {
+    display: block;
+}
+}

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 class="center-align primary">Add Games</h2>
+<h2 class="center-align primary primary-font">Add Games</h2>
 
-<div class="row col s12 m6 card-panel stripes" id="register-card-info-right">
+<div class="row col s12 m6 card-panel stripes secondary-font" id="register-card-info-right">
     <p> <strong> Members are what make this site and we love that you have
             found the time to add a new game to our evergrowing database. In order
             to successfully complete this action please fill out the required fields
@@ -11,7 +11,7 @@
     </p>
 </div>
 
-<div class="row col s12 m6" id="register-card">
+<div class="row col s12 m6 secondary-font" id="register-card">
     <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
         <form class="col s12" method="POST" action="{{url_for('add_games')}}">
             <div class="row">

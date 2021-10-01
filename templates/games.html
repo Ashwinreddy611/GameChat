@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-    <div class="row card-panel">
+    <div class="row card-panel primary-font">
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
@@ -11,14 +11,14 @@
                 </div>
                 <div class="col s12 m4">
                     <a href="{{ url_for('get_games') }}" class="btn">Reset</a>
-                    <button type="submit" class="btn">
-                        <i class="fas fa-search left"></i> Search
+                    <button type="submit" class="btn primary-font">
+                        Search
                     </button>
                 </div>
             </div>
         </form>
     </div>
-    <div class="card-container">
+    <div class="card-container secondary-font">
         {% for game in games %}
         <div class="border" style="width: 33%">
             <div class="card">

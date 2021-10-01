@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 class="center-align primary">Edit Games</h2>
+<h2 class="center-align primary primary-font">Edit Games</h2>
 
-<div class="row col s12 m6" id="register-card">
+<div class="row col s12 m6 secondary-font" id="register-card">
     <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
         <form class="col s12" method="POST" action="{{url_for('edit_game', game_id=game._id)}}">
             <div class="row">

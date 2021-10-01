@@ -16,7 +16,7 @@
         <form class="col s12" method="POST" action="{{url_for('add_games')}}">
             <div class="row">
                 <div class="input-field col s12">
-                    <select id="genre-name" name="genre_name" class="validate add-game-form" required>
+                    <select id="genre_name" name="genre_name" class="validate add-game-form" required>
                         <option value="" disabled selected>Choose Genre</option>
                         {% for genre in genres %}
                         <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">create</i>
-                    <input id="game-name" name="game_name" minlength="5"
+                    <input id="game_name" name="game_name" minlength="5"
                     maxlength="50" type="text" class="validate" required>
                     <label for="game_name">Game Name</label>
                 </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">create</i>
-                    <textarea id="game-description" name="game_description" minlength="5"
+                    <textarea id="game_description" name="game_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
                     <label for="game_description">Game Description</label>
                 </div>
@@ -44,14 +44,14 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">date_range</i>
-                    <input id="release-date" name="release_date" type="text" class="datepicker validate" required>
+                    <input id="release_date" name="release_date" type="text" class="datepicker validate" required>
                     <label for="release_date">Release Date</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">portrait</i>
-                    <input id="img-url" name="img_url" type="text" class="validate" required>
+                    <input id="img_url" name="img_url" type="text" class="validate" required>
                     <label for="img_url">Image URL</label>
                     <small><em>Please use a portrait image when inputting the image url to ensure proper formatting on the site.</em></small>
                 </div>

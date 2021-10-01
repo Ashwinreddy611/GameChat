@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="game-name" name="game_name" minlength="5"
+                    <input id="game_name" name="game_name" minlength="5"
                     maxlength="50" value="{{ game.game_name }}" type="text" class="validate" required>
                     <label for="game_name">Game Name</label>
                 </div>
@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">phone</i>
-                    <textarea id="game-description" name="game_description" minlength="5"
+                    <textarea id="game_description" name="game_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required>
                         {{- game.game_description -}}
                     </textarea>
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">date_range</i>
-                    <input id="release-date" name="release_date" type="text" value="{{game.release_date}}" 
+                    <input id="release_date" name="release_date" type="text" value="{{game.release_date}}" 
                     class="datepicker validate" required>
                     <label for="release_date">Release Date</label>
                 </div>
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="img-url" name="img_url" type="text" value="{{game.img_url}}"
+                    <input id="img_url" name="img_url" type="text" value="{{game.img_url}}"
                      class="validate" required>
                     <label for="img_url">Image URL</label>
                 </div>

@@ -142,7 +142,7 @@ body {
   margin-top: 10px;
 }
 
-#game-name, #game-description , #img-url, #release-date{
+#game_name, #game_description , #img_url, #release_date{
   color: white;
 }
 

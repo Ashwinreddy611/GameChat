@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap" rel="stylesheet">
     <title>GameChat</title>
-    {% block styles %}
-    {% endblock %}
-</head>
+  </head>
+
+
 <body>
     <header class="primary-font">
       <nav>
@@ -56,7 +56,7 @@
           {% if messages %}
               {% for message in messages %}
                   <div class="row flash-msg">
-                      <h5 class="primary center-align">{{ message }}</h4>
+                      <h5 class="primary center-align">{{ message }}</h5>
                   </div>
               {% endfor %}
           {% endif %}

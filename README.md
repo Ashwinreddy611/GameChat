@@ -25,7 +25,7 @@ c) I should be able to manage the games on my wishlist with ease and be able to 
 #### **Site Owner Goals:** 
 a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
 
-### Design
+### **Design**
 
 #### Colour Scheme
 * The colour scheme for my website is a primary colour of red, secondary colour of black in the form of the background and a tertiary colour of white in the form of all scripture on the site. I feel the scheme chosen reflects what I would like the user to feel when on the site and that is relaxed and comfortable. This comfort comes from the dark tones of the site which is less straining to the eyes than more conventional light tones but still retains an aesthetically pleasing design.
@@ -33,11 +33,11 @@ a) As the site owner I should have full admin capabitlites being able to monitor
 #### Typography
 * In terms of typography the fonts Monoton and Roboto. The Monoton font was chosen due to the fact that it has a very retro connotation and is a reminder to the user of the games and tech of the past. This is coupled with the Roboto font that is very sleek and modern to connote the ever changing and devloping games coming out now and in the coming future. These two fonts complement each other even though there symbolism run parallel and that's why I was very much happy to choose this pairing.  
 
-### Wireframes
+### **Wireframes**
 A seperate md file has been created for all wireframes found [Here](/wireframes.md)
 
 
-### Features
+### **Features**
 #### Features availible to all members 
 * The ability to view all the posts on the site of all the different games. There is also the ability to register for these unregistered memebers which is very easy. 
 
@@ -60,9 +60,9 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 
 * The third feature to implement is an affiliate link system where users can sell the game that has been posted and the site would take a percentage of any purchases. The attraction to selling on the website would be that there is a large community of users making a sale very convenient. 
 
-### Database
+### **Database**
 * The Database design can be found [Here](database.png) 
-### Technologies Used
+### **Technologies Used**
 #### Languages
 * HTML5
 * CSS3
@@ -83,7 +83,7 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 * MongoDB - The site where GameChat's database information was created.
 * RandomKeyGen - The site used to create a secure secret key for the site.
 
-### Testing 
+### **Testing**
 #### Validation
 * HTML - All pages passed the validation using the validator found [Here](https://validator.w3.org/nu/). The checks were done by viewing the page sources of each page as the validator had problems with jinja templating. 
 * CSS - The css passed validation using the validator found [Here](https://jigsaw.w3.org/css-validator/#validate_by_input).
@@ -92,7 +92,7 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 #### Lighthouse
 * The lighthouse scores can be found [Here](lighthouse.png)
 * I am haooy with all the scores however I do wish that the site performance was also in the 90s. I feel this could be done if I could figure out how to formate the images in a next-gen fashion however with the time constraints I had I couldn't figure it out. This will be my aim to correct in the future.
-#### Testing user stories 
+#### **Testing user stories**
 #### First Time user goals 
 a) As a first time visitor I would like to get to grips with and comprehend instantly the purpose and intent of the website. This should be communicated clearly
 > i. The site is intuitively layed out and instructs the user if they are not regiistered what the functionality they arte missing out on. 
@@ -120,12 +120,12 @@ c) I should be able to manage the games on my wishlist with ease and be able to 
 a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
 > i. As the site owner with the account 'ashwin-test' I have full admin capabilities, I can delete and edit any posts whilst still bein able to upload myself.
 
-#### Responsive design
+#### **Responsive design**
 * The site has been tested on all devices, using the chrome developer tools. The site is formatted in a very aesthetically pleasing manner whilst maintaining functionality.
 
-#### Known Bugs 
+#### **Known Bugs**
 * Currently the only known bug I am aware of is in the design the cards when you resize the desktop view to being quite narrow. This at the point before mobile view and at this screen size the cards look quite stretched out. 
-### Deployment 
+### **Deployment**
 #### Heroku Deployment 
 * Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 
 1. os.environ.setdefault("IP", "0.0.0.0")
@@ -150,7 +150,7 @@ These were all added to the .gitignore file due to sensitivity.
 * Open your terminal application (Git Bash for example) and change the working directory to the location where you want this clone.
 * enter the Git clone command and past the orignal url and click enter.
 
-### Credits 
+### **Credits** 
 * All images were taken from google images and can be found by searching the game name into the google search bar
 
 * The stripey background on the forms was found on css tricks and can be found [Here](https://css-tricks.com/stripes-css/)

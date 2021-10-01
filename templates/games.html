@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
+    <div class="row card-panel">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="primary"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Games</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_games') }}" class="btn">Reset</a>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
     <div class="card-container">
         {% for game in games %}
         <div class="border" style="width: 33%">

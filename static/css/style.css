@@ -107,6 +107,10 @@ body {
   font-size: 11px;
 }
 
+.label :active {
+  color:#c5283d;
+}
+
 /*Add Game form stylings*/
 .datepicker-date-display{
   background-color: #c5283d;

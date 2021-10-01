@@ -105,3 +105,8 @@ These were all added to the .gitignore file due to sensitivity.
 * Click the code dropdown and copy the repo url 
 * Open your terminal application (Git Bash for example) and change the working directory to the location where you want this clone.
 * enter the Git clone command and past the orignal url and click enter.
+
+### Credits 
+* All images were taken from google images and can be found by searching the game name into the google search bar
+
+* The stripey background on the forms was found on css tricks and can be found [Here](https://css-tricks.com/stripes-css/)

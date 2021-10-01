@@ -4,6 +4,10 @@ body {
     background-color: black;
 }
 
+.primary-font{
+  font-family: 'Monoton', sans-serif;
+}
+
 .primary {
     background-color: #c5283d;
 }
@@ -135,3 +139,10 @@ body {
 #game-name, #game-description , #img-url, #release-date{
   color: white;
 }
+
+/* Login Page stylings */
+
+#login-form {
+  padding: 80px;
+}
+

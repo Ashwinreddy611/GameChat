@@ -17,7 +17,7 @@ d) I should be able to register an account where I can interact with the sites c
 #### **Returning Visitor Goals:**
 a) As a returning user I would like to be able to manage my account that I have set up when first interacting with the site. There should be no way for an individual to brute force their way into my account.
 
-b) I should also be able to uplad games to the site for the communities benefit where other members can leave their own opiions on and add to their own wishlist if they desire so. Any games, and subsequent comments for the game, that have been uploaded to the GameChat website should only be deletable by an admin of the site and the user who has uploaded said game. 
+b) I should also be able to upload games to the site for the communities benefit where other members can leave their own opiions on and add to their own wishlist if they desire so. Any games, and subsequent comments for the game, that have been uploaded to the GameChat website should only be deletable by an admin of the site and the user who has uploaded said game. 
 
 c) I should be able to manage the games on my wishlist with ease and be able to sort the wishlist by genre as well as alphabetically. 
 
@@ -92,8 +92,29 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 #### Lighthouse
 * The lighthouse scores can be found [Here](lighthouse.png)
 * I am haooy with all the scores however I do wish that the site performance was also in the 90s. I feel this could be done if I could figure out how to formate the images in a next-gen fashion however with the time constraints I had I couldn't figure it out. This will be my aim to correct in the future.
+#### Testing user stories 
+#### First Time user goals 
+a) As a first time visitor I would like to get to grips with and comprehend instantly the purpose and intent of the website. This should be communicated clearly
+> i. The site is intuitively layed out and instructs the user if they are not regiistered what the functionality they arte missing out on. 
 
+b) I should be able to search for specific games using a search bar feature as well as have the option to view all games by genre
+> i. The search bar works by typing in a word of at least 3 characters and finding a post matching what the user has inputted. This currently only works for game titles and game genres. 
 
+c) I should be able to see the posts of other users with a feature to identify these users. 
+> i. All posts show the user that has posted by displaying their regostered username. 
+
+d) I should be able to register an account where I can interact with the sites community via the comment sections of games as well as be able to create a wishlist for all the games I am interested in purchasing in the future. 
+> i. These features are being worked on and will be deployed in the future. Due to time constraints I was unable to deploy them in this version of the site. 
+
+#### Returning user goals 
+a) As a returning user I would like to be able to manage my account that I have set up when first interacting with the site. There should be no way for an individual to brute force their way into my account.
+> i. Users are unable to brute force other people accounts and the passwords are safely hashed using werkzeug. Blank accounts can not be created as there has been a minimun character length inputted into the form for registering a username and password. In the future the ability to change password and account details will be added to the site.
+
+b) I should also be able to upload games to the site for the communities benefit where other members can leave their own opiions on and add to their own wishlist if they desire so. Any games, and subsequent comments for the game, that have been uploaded to the GameChat website should only be deletable by an admin of the site and the user who has uploaded said game.
+> i. Any registered user is able to post games as well as delet their own games. The only user able to delete other users' posts is the admin account which goes by the name of 'ashwin-test'.
+
+c) I should be able to manage the games on my wishlist with ease and be able to sort the wishlist by genre as well as alphabetically. 
+> i. These features will be implemented when the wishlist functionaility is deployed to the website in the distant future.
 ### Deployment 
 #### Heroku Deployment 
 * Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 

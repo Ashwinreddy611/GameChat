@@ -61,7 +61,7 @@ A seperate md file has been created for all wireframes found [Here](/wireframes.
 * The third feature to implement is an affiliate link system where users can sell the game that has been posted and the site would take a percentage of any purchases. The attraction to selling on the website would be that there is a large community of users making a sale very convenient. 
 
 ### Database
-
+* The Database design can be found [Here](database.png) 
 ### Technologies Used
 #### Languages
 * HTML5

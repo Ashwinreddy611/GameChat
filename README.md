@@ -119,6 +119,12 @@ c) I should be able to manage the games on my wishlist with ease and be able to 
 #### **Site Owner Goals:** 
 a) As the site owner I should have full admin capabitlites being able to monitor and update anything I would like to on the webiste. This includes users, games posted and genres of games on the website. 
 > i. As the site owner with the account 'ashwin-test' I have full admin capabilities, I can delete and edit any posts whilst still bein able to upload myself.
+
+#### Responsive design
+* The site has been tested on all devices, using the chrome developer tools. The site is formatted in a very aesthetically pleasing manner whilst maintaining functionality.
+
+#### Known Bugs 
+* Currently the only known bug I am aware of is in the design the cards when you resize the desktop view to being quite narrow. This at the point before mobile view and at this screen size the cards look quite stretched out. 
 ### Deployment 
 #### Heroku Deployment 
 * Before connecting to Heroku the app needed a procfile, requirements.txt and an env.py file that had the following variables: 

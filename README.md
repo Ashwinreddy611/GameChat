@@ -34,6 +34,8 @@ a) As the site owner I should have full admin capabitlites being able to monitor
 * In terms of typography the fonts Monoton and Roboto. The Monoton font was chosen due to the fact that it has a very retro connotation and is a reminder to the user of the games and tech of the past. This is coupled with the Roboto font that is very sleek and modern to connote the ever changing and devloping games coming out now and in the coming future. These two fonts complement each other even though there symbolism run parallel and that's why I was very much happy to choose this pairing.  
 
 ### Wireframes
+A seperate md file has been created for all wireframes found [Here](/wireframes.md)
+
 
 ### Features
 #### Features availible to all members 

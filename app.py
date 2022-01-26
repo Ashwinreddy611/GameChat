@@ -7,6 +7,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+    print(os.environ.get("MONGO_DBNAME"))
 
 
 app = Flask(__name__)
@@ -151,7 +152,23 @@ def delete_game(game_id):
     return redirect(url_for("get_games"))
 
 
+@app.route("/add_to_watchlist")
+def watchlist():
+    if request.method == "POST":
+        watchlist_input = {
+            "genre_name": request.form.get("genre_name"),
+            "game_name": request.form.get("game_name"),
+            "game_description": request.form.get("game_description"),
+            "release_date": request.form.get("release_date"),
+            "img_url": request.form.get("img_url"),
+        }
+    else:
+        return render_template("watchlist.html")
+    
+    return render_template("watchlist.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)

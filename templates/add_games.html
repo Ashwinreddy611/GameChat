@@ -13,7 +13,7 @@
 
 <div class="row col s12 m6 secondary-font" id="register-card">
     <div class="col s12 m6 card-panel stripes" id="register-card-info-left">
-        <form class="col s12" method="POST" action="{{url_for('add_games')}}">
+        <form class="col s12" method="POST" action="{{url_for('add_games')}}" enctype="multipart/form-data">
             <div class="row">
                 <div class="input-field col s12">
                     <select id="genre_name" name="genre_name" class="validate add-game-form" required>

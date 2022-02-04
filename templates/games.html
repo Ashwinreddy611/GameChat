@@ -32,10 +32,15 @@
                 <p>{{game.game_description}}</p> <br>
                 <p>{{game.release_date}}</p> <br>
                 <p><small>{{game.created_by}}</small></p>
-                <a class="btn-floating btn-medium waves-effect waves-light red"  href="{{ url_for('watchlist')}}">
-                    <i class="material-icons tooltipped" data-position='bottom' data-tooltip='Add to Watchlist'>add</i>
-                </a>
 
+                <form action="{{ url_for('add_to_watchlist', game_id=game._id) }}" method="POST">
+                    <button class="btn-floating btn-medium waves-effect waves-light red" type="submit" name="watchlist">
+                        <i class="material-icons tooltipped" data-position='bottom' data-tooltip='Add to Watchlist'>add</i>
+                    </button>
+                </form>
+
+                
+                <br>
                 {% if game.created_by == session.user or game.created_by == 'ashwin-test'  %}
                 <a href="{{ url_for('edit_game', game_id=game._id) }}"
                     class="waves-effect waves-light btn-small primary">Edit</a>

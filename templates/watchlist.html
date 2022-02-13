@@ -1,12 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1 class='center-align primary primary-font'>This is you watchlist</h1>
+    <h1 class='center-align primary primary-font'>Community Watchlist</h1>
 
     <div class="row">
-        {% if session['games'] %}
-            {% for game in session['games'] %}
-            <li> {{ game }}</li>
-            {% endfor %}
-        {% endif %}
+        {% for game in games %}
+        <div class="col s12 m4 border">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{watchlist.img_url}}" alt= "image of {{watchlist.game_name}}" class="responsive-img">
+                </div>
+            </div>
+            <div class="card-content">
+                <h6 class="card-title">{{watchlist.game_name}}</h6> <br>
+                <strong>{{watchlist.genre_name}}</strong> <br>
+                <p>{{watchlist.game_description}}</p> <br>
+                <p>{{watchlist.release_date}}</p> <br>
+                <p><small>{{watchlist.created_by}}</small></p>                
+                <br>
+                {% if watchlist.created_by == session.user or watchlist.created_by == 'ashwin-test'  %}
+                <a href="{{ url_for('edit_game', game_id=game._id) }}"
+                    class="waves-effect waves-light btn-small primary">Edit</a>
+                <a href="{{ url_for('delete_game', game_id=game._id) }}"
+                    class="waves-effect waves-light btn-small primary">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
     </div>
 {% endblock %}

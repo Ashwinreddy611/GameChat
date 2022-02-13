@@ -154,26 +154,21 @@ def delete_game(game_id):
 
 @app.route("/add_to_watchlist/<game_id>", methods=["GET", "POST"])
 def add_to_watchlist(game_id):
-   
+
     if request.method == "POST":
-        watchlist = {
-            "genre_name": request.form.get("genre_name"),
-            "game_name": request.form.get("game_name"),
-            "game_description": request.form.get("game_description"),
-            "release_date": request.form.get("release_date"),
-            "img_url": request.form.get("img_url"),
-            "created_by": session["user"]
-        }
-        
-    mongo.db.watchlist.insert_one(watchlist)
+        game_id = mongo.db.games.find({},{'_id': 1, 'genre_name': 1, 
+        'game_name': 1, 'game_description': 1, 'release_date': 1, 
+        'img_url': 1, 'created_by': 1})
+
+    mongo.db.watchlist.insert_many(game_id)
     
     return render_template("watchlist.html")
 
 
 @app.route("/display_watchlist")
 def display_watchlist():
-    print(session['games'])
-    return render_template("watchlist.html")
+    watchlist = list(mongo.db.watchlist.find())
+    return render_template("watchlist.html", watchlist=watchlist)
 
 
 if __name__ == "__main__":

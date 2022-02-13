@@ -35,7 +35,11 @@ body {
   border-width: 1px;
 }
 
-
+img.responsive-img {
+  max-width: 100% !important;
+  height: 375px !important;
+}
+}
 
 /*Register Page Stylings */
 #register-card {

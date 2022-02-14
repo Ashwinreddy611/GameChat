@@ -150,7 +150,12 @@ These were all added to the .gitignore file due to sensitivity.
 * Open your terminal application (Git Bash for example) and change the working directory to the location where you want this clone.
 * enter the Git clone command and past the orignal url and click enter.
 
+### Changes for Resubmission
+* Visual bugs where the images of the games on the cards where of varying sizes has been corrected. They are all now the same size giving a more aesthetic appearance.
+* Another visual bug where the border of the cards was abnormally long has been corrected to again be more aesthetic but also the chracter count for the game description text field as been altered so the maximum character length is 100. This is in attempt to prevent any stretching of the card that makes the site look visually unappealing.
+* The watchlist idea previously mentioned in this ReadMe has been developed further and slightly altered into a community watchlist. This is where authenticated users can click the add button and add a game they like. This has developed the community aim this site has had. 
+
 ### **Credits** 
-* All images were taken from google images and can be found by searching the game name into the google search bar
+* All images were taken from google images and can be found by searching the game name into the google search bar.
 
 * The stripey background on the forms was found on css tricks and can be found [Here](https://css-tricks.com/stripes-css/)

@@ -39,7 +39,7 @@ img.responsive-img {
   max-width: 100% !important;
   height: 375px !important;
 }
-}
+
 
 /*Register Page Stylings */
 #register-card {
@@ -113,7 +113,7 @@ img.responsive-img {
   border-color: white;
   border-width: 3px;
   padding: 10px;
-  height: 1000px;
+  height: 900px;
 }
 
 .block {

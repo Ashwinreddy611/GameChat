@@ -10,4 +10,30 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    {% for game in watchlist %}
+        <div class="col s12 m4 border">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{game.img_url}}" alt= "image of {{game.game_name}}" class="responsive-img">
+                </div>
+            </div>
+            <div class="card-content">
+                <h6 class="card-title">{{game.game_name}}</h6> <br>
+                <strong>{{game.genre_name}}</strong> <br>
+                <p>{{game.game_description}}</p> <br>
+                <p>{{game.release_date}}</p> <br>
+                <p><small>{{game.created_by}}</small></p>                
+                <br>
+                {% if game.created_by == session.user or game.created_by == 'ashwin-test'  %}
+                <a href="{{ url_for('edit_game', game_id=game._id) }}"
+                    class="waves-effect waves-light btn-small primary">Edit</a>
+                <a href="{{ url_for('delete_game', game_id=game._id) }}"
+                    class="waves-effect waves-light btn-small primary">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}

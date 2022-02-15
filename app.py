@@ -128,8 +128,6 @@ def add_games():
 @app.route("/edit_game/<game_id>", methods=["GET", "POST"])
 def edit_game(game_id):
     if 'user' in session:
-        game = mongo.db.games
-        if game.created_by == session.user or game.created_by == 'ashwin-test':
             if request.method == "POST":
                 submit = {
                     "genre_name": request.form.get("genre_name"),
@@ -153,11 +151,9 @@ def edit_game(game_id):
 @app.route("/delete_game/<game_id>")
 def delete_game(game_id):
     if 'user' in session:
-        game = mongo.db.games
-        if game.created_by == session.user or game.created_by == 'ashwin-test':
-            mongo.db.games.remove({"_id": ObjectId(game_id)})
-            flash("Game Successfully Deleted")
-            return redirect(url_for("get_games"))
+        mongo.db.games.remove({"_id": ObjectId(game_id)})
+        flash("Game Successfully Deleted")
+        return redirect(url_for("get_games"))
     else:
         flash("You must be logged in to perform that action")
     return redirect(url_for("login"))
@@ -166,16 +162,13 @@ def delete_game(game_id):
 @app.route("/add_to_watchlist/<game_id>", methods=["GET", "POST"])
 def add_to_watchlist(game_id):
     if 'user' in session:
-        game = mongo.db.games
-        if game.created_by == session.user or game.created_by == 'ashwin-test':
-            if request.method == "POST":
-                game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
-
-                if mongo.db.watchlist.find_one({"_id": game["game_name"]}):
-                    flash("This game is already in the watchlist")
-                    redirect(url_for("get_games"))
-                else:
-                    mongo.db.watchlist.insert_one(game)
+        if request.method == "POST":
+            game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
+            if mongo.db.watchlist.find_one({"_id": game["game_name"]}):
+                flash("This game is already in the watchlist")
+                redirect(url_for("get_games"))
+            else:
+                mongo.db.watchlist.insert_one(game)
 
     return redirect(url_for("display_watchlist"))
 
@@ -188,8 +181,9 @@ def display_watchlist():
 
 @app.route("/profile_entries/<game_id>")
 def profile_entries():
-    profile = mongo.db.games.find_one({'_id': ObjectId(game_id)})
-    list(mongo.db.games.find_one({"_id": profile["created_by"]}))
+    user_profiles = mongo.db.games.find().sort("created_by", 1)
+    profiles = list(user_profiles)
+    return render_template("profile.login", profiles=profiles)
 
 
 if __name__ == "__main__":

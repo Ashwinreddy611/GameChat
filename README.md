@@ -154,6 +154,9 @@ These were all added to the .gitignore file due to sensitivity.
 * Visual bugs where the images of the games on the cards where of varying sizes has been corrected. They are all now the same size giving a more aesthetic appearance.
 * Another visual bug where the border of the cards was abnormally long has been corrected to again be more aesthetic but also the chracter count for the game description text field as been altered so the maximum character length is 100. This is in attempt to prevent any stretching of the card that makes the site look visually unappealing.
 * The watchlist idea previously mentioned in this ReadMe has been developed further and slightly altered into a community watchlist. This is where authenticated users can click the add button and add a game they like. This has developed the community aim this site has had. 
+* Defensive programming has been utilised so that hackers can not break the code and ruin the site/utilise registered user funcions.
+* Changed the stripey background on the add games and edit games pages to a plain red background as the striped background was not visually appealing.
+* Implemented the ability for users to see what they have posted to the site. This would be found on the user's profile page.
 
 ### **Credits** 
 * All images were taken from google images and can be found by searching the game name into the google search bar.

@@ -2,17 +2,23 @@
 {% block content %}
 
 <div class="row secondary-font">
-    <div class="col s12 m8 offset-m2">
+    
         <div class="card-panel">
             <h3 class="center-align primary">
                 {{ username }}'s Profile
             </h3>
+            <h4 class='center-align primary primary-font'>
+            Welcome to your profile. This is where you'll find all your posts on the site in one 
+            convenient place!
+            </h4>
         </div>
-    </div>
+    
 </div>
 
+    
+
 <div class="row">
-    {% for game in watchlist %}
+    {% for game in profiles %}
         <div class="col s12 m4 border">
             <div class="card">
                 <div class="card-image">
@@ -26,12 +32,6 @@
                 <p>{{game.release_date}}</p> <br>
                 <p><small>{{game.created_by}}</small></p>                
                 <br>
-                {% if game.created_by == session.user or game.created_by == 'ashwin-test'  %}
-                <a href="{{ url_for('edit_game', game_id=game._id) }}"
-                    class="waves-effect waves-light btn-small primary">Edit</a>
-                <a href="{{ url_for('delete_game', game_id=game._id) }}"
-                    class="waves-effect waves-light btn-small primary">Delete</a>
-                {% endif %}
             </div>
         </div>
     {% endfor %}

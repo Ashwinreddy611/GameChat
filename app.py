@@ -94,7 +94,9 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session['user']:
-        return render_template("profile.html", username=username)
+        profiles = mongo.db.games.find({"created_by": username})
+        print(profiles)
+        return render_template("profile.html", username=username, profiles=profiles)
 
     return redirect(url_for('login'))
 
@@ -177,13 +179,6 @@ def add_to_watchlist(game_id):
 def display_watchlist():
     watchlist = list(mongo.db.watchlist.find())
     return render_template("watchlist.html", watchlist=watchlist)
-
-
-@app.route("/profile_entries/<game_id>")
-def profile_entries():
-    user_profiles = mongo.db.games.find().sort("created_by", 1)
-    profiles = list(user_profiles)
-    return render_template("profile.login", profiles=profiles)
 
 
 if __name__ == "__main__":

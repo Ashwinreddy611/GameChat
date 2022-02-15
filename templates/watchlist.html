@@ -2,22 +2,28 @@
 {% block content %}
     <h1 class='center-align primary primary-font'>Community Watchlist</h1>
 
+    <div class='row'>
+        <h5 class='center-align primary primary-font'>Welcome to the community watchlist where registered members can view what other registered users are 
+            loving playing at the moment. It's a place where interests are exchanged and eyes are opened so 
+            get sharing and keep your eyes on the watchlist!
+        </h5>
+    </div>
     <div class="row">
-        {% for x in watchlist %}
+        {% for game in watchlist %}
         <div class="col s12 m4 border">
             <div class="card">
                 <div class="card-image">
-                    <img src="{{watchlist.img_url}}" alt= "image of {{watchlist.game_name}}" class="responsive-img">
+                    <img src="{{game.img_url}}" alt= "image of {{game.game_name}}" class="responsive-img">
                 </div>
             </div>
             <div class="card-content">
-                <h6 class="card-title">{{watchlist.game_name}}</h6> <br>
-                <strong>{{watchlist.genre_name}}</strong> <br>
-                <p>{{watchlist.game_description}}</p> <br>
-                <p>{{watchlist.release_date}}</p> <br>
-                <p><small>{{watchlist.created_by}}</small></p>                
+                <h6 class="card-title">{{game.game_name}}</h6> <br>
+                <strong>{{game.genre_name}}</strong> <br>
+                <p>{{game.game_description}}</p> <br>
+                <p>{{game.release_date}}</p> <br>
+                <p><small>{{game.created_by}}</small></p>                
                 <br>
-                {% if watchlist.created_by == session.user or watchlist.created_by == 'ashwin-test'  %}
+                {% if game.created_by == session.user or game.created_by == 'ashwin-test'  %}
                 <a href="{{ url_for('edit_game', game_id=game._id) }}"
                     class="waves-effect waves-light btn-small primary">Edit</a>
                 <a href="{{ url_for('delete_game', game_id=game._id) }}"

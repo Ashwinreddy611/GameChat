@@ -63,14 +63,7 @@ img.responsive-img {
 }
 
 .stripes {
-  color: white;
-  background: repeating-linear-gradient(
-    45deg,
-    #c5283d,
-    #c5283d 20px,
-    black 20px,
-    black 40px
-  )
+  background-color:#c5283d;
 }
 
 .input-field input[type=text]:focus + label {
@@ -137,7 +130,7 @@ img.responsive-img {
 }
 
 .select-wrapper input.select-dropdown  {
-  color: white;
+  color: #26a69a;
 }
 
 .dropdown-content li>span {
@@ -165,3 +158,5 @@ img.responsive-img {
     display: block;
 }
 }
+
+

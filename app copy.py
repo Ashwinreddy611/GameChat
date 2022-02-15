@@ -1,7 +1,14 @@
-import os
+# import os
+
 from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+    Flask, 
+    flash, 
+    render_template,
+    redirect, 
+    request, 
+    session, 
+    url_for,
+    )
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -67,13 +74,10 @@ def login():
 
         if registered_user:
             # checks if password matches user input
-            if check_password_hash(
-                registered_user["password"],
-                request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}"
-                        .format(request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"]))
+            if check_password_hash(registered_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Unfortunately your details are incorrect")
@@ -147,7 +151,7 @@ def edit_game(game_id):
             return render_template("edit_game.html", game=game, genres=genres)
     else:
         flash("You must be logged in to perform that action")
-        return redirect(url_for("login"))
+        return redirect(url_for("login")
 
 
 @app.route("/delete_game/<game_id>")
@@ -165,17 +169,15 @@ def delete_game(game_id):
 
 @app.route("/add_to_watchlist/<game_id>", methods=["GET", "POST"])
 def add_to_watchlist(game_id):
-    if 'user' in session:
-        game = mongo.db.games
-        if game.created_by == session.user or game.created_by == 'ashwin-test':
-            if request.method == "POST":
-                game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
 
-                if mongo.db.watchlist.find_one({"_id": game["game_name"]}):
-                    flash("This game is already in the watchlist")
-                    redirect(url_for("get_games"))
-                else:
-                    mongo.db.watchlist.insert_one(game)
+    if request.method == "POST":
+        game = mongo.db.games.find_one({'_id': ObjectId(game_id)})
+
+        if mongo.db.watchlist.find_one({"_id": game["game_name"]}):
+            flash("This game is already in the watchlist")
+            redirect(url_for("get_games"))
+        else:
+            mongo.db.watchlist.insert_one(game)
 
     return redirect(url_for("display_watchlist"))
 
